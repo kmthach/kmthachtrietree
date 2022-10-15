@@ -1,6 +1,7 @@
 # Kmthachtrietree
 
 This project is the implementation of trie tree (prefix tree) using Python.
+
 The project use the tutorial code at below link.
 
 ---
@@ -33,8 +34,6 @@ print(result)
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
-Pay attention: please replace the glove.6B.100d.txt file with the file in [glove.6B.zip](https://nlp.stanford.edu/data/glove.6B.zip).
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
