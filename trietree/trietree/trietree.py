@@ -1,5 +1,6 @@
 from pathlib import Path
 import sys
+import time
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[0]
 if str(ROOT) not in sys.path:
@@ -60,6 +61,7 @@ class TrieTree(object):
         """
         # Use a variable within the class to keep all possible outputs
         # As there can be more than one word with such prefix
+        begin_time = time.time()
         self.output = []
         node = self.root
         
@@ -79,5 +81,9 @@ class TrieTree(object):
         # Sort the results in reverse order and return
         results = sorted(self.output, key=lambda x: x[1], reverse=True)
         top_5 = [result[0] for result in results[:5]]
-        
-        return top_5
+        inference_time = time.time() - begin_time
+        result_dict = {
+            'result': top_5,
+            'inference_time': inference_time
+        }
+        return result_dict

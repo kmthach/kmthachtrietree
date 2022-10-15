@@ -23,9 +23,12 @@ Use can look at the example in the given test.py:
 from trietree.trietree import loader
 
 tree = loader.initialize_fit_tree()
+
 result = tree.query('D')
-print(result)
->>> ['death at a funeral', 'deception', 'dawn of the dead', 'dark water', 'django']
+top5 = result['result']
+time = result['inference_time']
+print(f'result: {top5} time: {time}')
+>>> result: ['death at a funeral', 'deception', 'dawn of the dead', 'dark water', 'django'] time: 0.0015811920166015625
 
 ```
 
